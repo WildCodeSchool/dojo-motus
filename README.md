@@ -10,4 +10,6 @@ Le mot apparaît alors sur une grille :
 - Les lettres présentes mais mal placées sont cerclées de jaune 🟡
 - Les lettres incorrectes sont coloriées en bleu 🟦
 
+Les tests sont écrits, vous pouvez réaliser ce dojo en TDD en décommentant un test à chaque itération
+
 
