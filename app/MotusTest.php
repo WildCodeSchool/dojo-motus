@@ -25,5 +25,6 @@ class MotusTest extends TestCase
         $this->assertEquals('🟡🟡🟡🟦🟩🟡🟩🟦', $motus->check('CHISINAU', 'MICHIGAN'));
         $this->assertEquals('🟩🟡🟦🟦🟩🟦🟡🟦', $motus->check('MALAISIE', 'MICHIGAN'));
         $this->assertEquals('🟩🟡🟦🟦🟩🟦🟡🟦', $motus->check('MASSILIA', 'MICHIGAN'));
+        $this->assertEquals('🟦🟡🟦🟦🟦🟩🟦🟡', $motus->check('NAGASAKI', 'TITICACA'));
     }
 }

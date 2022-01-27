@@ -67,6 +67,7 @@ class Motus
 
     public function checkIfYellowOrBlue(string $letter)
     {
+        var_dump($letter);
         if ($this->notMoreAwayThanTotal($letter) && $this->notMoreGreenThanTotal($letter)) {
             $this->aways[$letter]++;
             return '🟡';
@@ -77,13 +78,13 @@ class Motus
 
     public function notMoreAwayThanTotal($letter)
     {
-        return $this->aways[$letter] < $this->countLetters[$letter];
+        return ($this->aways[$letter] + $this->firstCountValids[$letter]) < $this->countLetters[$letter];
     }
 
     public function notMoreGreenThanTotal($letter)
     {
         $result = false;
-        if ($this->firstCountValids[$letter] < $this->aways[$letter] + $this->countLetters[$letter]) {
+        if ($this->firstCountValids[$letter] < ($this->aways[$letter] + $this->countLetters[$letter])) {
             $result = true;
         }
         return $result;
